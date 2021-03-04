@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+        </style>
+    </head>
+    
+    <body>
+        <div>
+            <form action="form.php" method="post">
+                <div>
+                    <button id="create" type="button">enter your details</button>
+                </div>
+                <div id="fname">
+                    <label for="fname">Firstname:</label>
+               <input  type="text" name="fname" placeholder="firstname"><br>
+                    <button type="button" id="01">back</button>
+                    <button type="button" id="1">next</button>
+                    </div>
+                <div id="lname">
+                    <label for="lname">Lastname:</label>
+               <input  type="text" name="lname" placeholder="lastname"><br>
+                    <button type="button" id="2">back</button>
+                    <button type="button" id="3">next</button>
+                    </div>
+                <div id="emailid">
+                    <label for="emailid">Emailaddress:</label>
+               <input  type="email" name="emailid" placeholder="email address"><br>
+                    <button type="button" id="4">back</button>
+                    <button type="button" id="5">next</button>
+                    </div>
+                <div id="age">
+                    <label for="age">age:</label>
+                    <input type="number" name="age" placeholder="age"><br>
+                    <button type="button" id="6">back</button>
+                    <button type="button" id="7">next</button>
+                </div>
+                <div id="phoneno">
+                    <label for="phoneno">Phone Number:</label>
+                    <input type="number" name="phoneno" placeholder="phone number"><br>
+                    <button type="button" id="8">back</button>
+                    <button type="button" id="9">next</button>
+                </div>
+                <div id="dob">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" name="dob" placeholder="date of birth"><br>
+                    <button type="button" id="10">back</button>
+                    <button type="button" id="11">next</button>
+                </div>
+                <div id="submit">
+                    <button type="submit">submit</button><br>
+                    <button type="button" id="12">back</button>
+                </div>
+        </form>
+            
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                
+                $("#fname").hide();
+                if($("#create").val() == 0) {
+                    $("#create").click(function(){
+                        $("#create").hide();
+                        $("#fname").show();
+                    });
+                    $("#01").click(function(){
+                        $("#fname").hide();
+                        $("#create").show();
+                    });
+                } else {
+                    $("#create").hide();
+                }
+                
+                $('#lname').hide();
+                if ($("#fname").val() == 0){
+                   $("#1").click(function(){
+                    $("#lname").show();
+                    $("#fname").hide();
+                });
+                 $("#2").click(function(){
+                    $("#lname").hide();
+                     $("#fname").show();
+                });   
+             } else {
+                 $("#lname").hide();
+             }
+                
+                $("#emailid").hide();
+                if($("#lname").val() == 0) {
+                    $("#3").click(function(){
+                    $("#lname").hide();
+                    $("#emailid").show();
+                });
+                    $("#4").click(function(){
+                    $("#emailid").hide();
+                     $("#lname").show();
+                });
+                } else {
+                    $("#lname").hide();
+                }
+                
+                $("#age").hide();
+                if($("#emailid").val() == 0){
+                    $("#5").click(function(){
+                        $("#emailid").hide();
+                        $("#age").show();
+                    });
+                    $("#6").click(function(){
+                        $("#age").hide();
+                        $("#emailid").show();
+                    });
+                } else {
+                    $("#emailid").hide();
+                }
+                
+                $("#phoneno").hide();
+                if($("#age").val() == 0){
+                    $("#7").click(function(){
+                        $("#age").hide();
+                        $("#phoneno").show();
+                    });
+                    $("#8").click(function(){
+                        $("#phoneno").hide();
+                        $("#age").show();
+                    });
+                } else {
+                    $("#age").hide();
+                }
+                
+                $("#dob").hide();
+                if($("#phoneno").val() == 0) {
+                    $("#9").click(function(){
+                        $("#phoneno").hide();
+                        $("#dob").show();
+                    });
+                    $("#10").click(function(){
+                        $("#dob").hide();
+                        $("#phoneno").show();
+                    });
+                } else {
+                    $("#phoneno").hide();
+                }
+                
+                $("#submit").hide();
+                if($("#dob").val() == 0) {
+                    $("#11").click(function(){
+                        $("#dob").hide();
+                        $("#submit").show();
+                    });
+                    $("#12").click(function(){
+                        $("#submit").hide();
+                        $("#dob").show();
+                    });
+                } else {
+                    $("#dob").hide();
+                }
+            });
+        </script>
+    </body>
+</html>
